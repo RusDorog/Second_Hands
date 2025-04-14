@@ -1,0 +1,10 @@
+.goods {
+  padding: 40px 0 60px;
+}
+
+.goods__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 280px);
+  justify-content: space-around;
+  gap: 20px;
+}

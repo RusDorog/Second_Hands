@@ -98,17 +98,17 @@
       <div class="hero__slider">
         <ul class="hero__slider-wrapper">
           <li class="hero__slider-item">
-            <a href="?category=women" class="hero__slider-link hero__slider-link_women">
+            <a href="?category=women" class="hero__slider-link" style="background-image: url('/img/women.jpg')">
              <h2 class="hero__slider-title">Новые поступления блузок</h2>
             </a>
           </li>
-          <li class="hero__slider-item">
-            <a href="?category=men" class="hero__slider-link hero__slider-link_men">
+          <li class="hero__slider-item" hidden>
+            <a href="?category=men" class="hero__slider-link" style="background-image: url('/img/mens.jpg')">
              <h2 class="hero__slider-title">Мужские стильные рубашки</h2>
             </a>
           </li>
-          <li class="hero__slider-item">
-            <a href="?category=kids" class="hero__slider-link hero__slider-link_kids">
+          <li class="hero__slider-item" hidden>
+            <a href="?category=kids" class="hero__slider-link" style="background-image: url('/img/kids.jpg')">
              <h2 class="hero__slider-title">Собираем ребенка
                в&nbsp;школу</h2>
             </a>
@@ -136,11 +136,13 @@
 
               <button class="item__to-cart">В корзину</button>
 
-              <p class="item__price">4000&nbsp;₽</p>
+              <p class="item__price">4000&nbsp;₽
                 <span class="item__old-price">5000&nbsp;₽</span>
+              </p>
+
+              <button class="item__description-btn">Подробнее</button>
             </div>
 
-            <button class="item__description-btn">Подробнее</button>
           </article>
         </li>
 
@@ -159,11 +161,13 @@
 
               <button class="item__to-cart">В корзину</button>
 
-              <p class="item__price">3400&nbsp;₽</p>
-              <span class="item__old-price">5600&nbsp;₽</span>
+              <p class="item__price">3400&nbsp;₽
+                <span class="item__old-price">5600&nbsp;₽</span>
+              </p>
+
+              <button class="item__description-btn">Подробнее</button>
             </div>
 
-            <button class="item__description-btn">Подробнее</button>
           </article>
         </li>
 
@@ -172,8 +176,8 @@
             <img src="img/womens_t_shitr.jpg" alt="Футболка женская" class="item__img">
 
             <button class="item__favorite-btm">
-              <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20.5625 0C19.0431 0 17.6501 0.467469 16.4223 1.38945C15.2451 2.27336 14.4614 3.39919 14 4.21784C13.5386 3.39913 12.7549 2.27336 11.5777 1.38945C10.3499 0.467469 8.95688 0 7.4375 0C3.19747 0 0 3.36727 0 7.8326C0 12.6567 3.98907 15.9573 10.028 20.9539C11.0535 21.8025 12.2159 22.7643 13.424 23.7901C13.5833 23.9255 13.7878 24 14 24C14.2122 24 14.4167 23.9255 14.576 23.7901C15.7842 22.7642 16.9466 21.8024 17.9727 20.9534C24.0109 15.9573 28 12.6567 28 7.8326C28 3.36727 24.8025 0 20.5625 0Z" fill="white" />
+              <svg width="28" height="24">
+                <use xlink:href="#heart" />
               </svg>
             </button>
 
@@ -182,11 +186,15 @@
 
               <button class="item__to-cart">В корзину</button>
 
-              <p class="item__price">2300&nbsp;₽</p>
-              <span class="item__old-price">4200&nbsp;₽</span>
+              <p class="item__price">2300&nbsp;₽
+                <span class="item__old-price">4200&nbsp;₽</span>
+              </p>
+
+              <button class="item__description-btn">
+                <span class="item__description-text">Подробнее</span>
+              </button>
             </div>
 
-            <button class="item__description-btn">Подробнее</button>
           </article>
         </li>
       </ul>
@@ -269,6 +277,12 @@
     <a href="#" class="footer__agreement">Соглашение об обработке персональных данных</a>
   </div>
 </footer>
+
+<svg class="hidden">
+  <symbol id="heart" viewBox="0 0 28 24">
+    <path d="M20.5625 0C19.0431 0 17.6501 0.467469 16.4223 1.38945C15.2451 2.27336 14.4614 3.39919 14 4.21784C13.5386 3.39913 12.7549 2.27336 11.5777 1.38945C10.3499 0.467469 8.95688 0 7.4375 0C3.19747 0 0 3.36727 0 7.8326C0 12.6567 3.98907 15.9573 10.028 20.9539C11.0535 21.8025 12.2159 22.7643 13.424 23.7901C13.5833 23.9255 13.7878 24 14 24C14.2122 24 14.4167 23.9255 14.576 23.7901C15.7842 22.7642 16.9466 21.8024 17.9727 20.9534C24.0109 15.9573 28 12.6567 28 7.8326C28 3.36727 24.8025 0 20.5625 0Z" fill="currentColor" />
+  </symbol>
+</svg>
 
 </body>
 </html>
