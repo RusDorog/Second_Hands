@@ -6,5 +6,17 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, 280px);
   justify-content: space-around;
-  gap: 20px;
+  gap: 60px 20px;
+}
+
+@media (max-width: 1000px) {
+  .goods__list {
+    row-gap: 50px;
+  }
+}
+
+@media (max-width: 580px) {
+  .goods__list {
+    row-gap: 30px;
+  }
 }

@@ -98,7 +98,8 @@
       <div class="hero__slider">
         <ul class="hero__slider-wrapper">
           <li class="hero__slider-item">
-            <a href="?category=women" class="hero__slider-link" style="background-image: url('/img/women.jpg')">
+            <a href="?category=women" class="hero__slider-link"
+               style="background-image: url('/img/women.jpg'); @media (max-width: 768px) {background-image: url('/img/banner_m.jpg')}">
              <h2 class="hero__slider-title">Новые поступления блузок</h2>
             </a>
           </li>
@@ -126,8 +127,8 @@
             <img src="img/cfcf2f84bb228803625561152c2b9c6e_2.jpg" alt="Джемпер" class="item__img">
 
             <button class="item__favorite-btm">
-              <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20.5625 0C19.0431 0 17.6501 0.467469 16.4223 1.38945C15.2451 2.27336 14.4614 3.39919 14 4.21784C13.5386 3.39913 12.7549 2.27336 11.5777 1.38945C10.3499 0.467469 8.95688 0 7.4375 0C3.19747 0 0 3.36727 0 7.8326C0 12.6567 3.98907 15.9573 10.028 20.9539C11.0535 21.8025 12.2159 22.7643 13.424 23.7901C13.5833 23.9255 13.7878 24 14 24C14.2122 24 14.4167 23.9255 14.576 23.7901C15.7842 22.7642 16.9466 21.8024 17.9727 20.9534C24.0109 15.9573 28 12.6567 28 7.8326C28 3.36727 24.8025 0 20.5625 0Z" fill="white" />
+              <svg width="28" height="24">
+                <use xlink:href="#heart" />
               </svg>
             </button>
 
@@ -151,13 +152,13 @@
             <img src="img/mens_t_shirt.jpg" alt="Футболка" class="item__img">
 
             <button class="item__favorite-btm">
-              <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20.5625 0C19.0431 0 17.6501 0.467469 16.4223 1.38945C15.2451 2.27336 14.4614 3.39919 14 4.21784C13.5386 3.39913 12.7549 2.27336 11.5777 1.38945C10.3499 0.467469 8.95688 0 7.4375 0C3.19747 0 0 3.36727 0 7.8326C0 12.6567 3.98907 15.9573 10.028 20.9539C11.0535 21.8025 12.2159 22.7643 13.424 23.7901C13.5833 23.9255 13.7878 24 14 24C14.2122 24 14.4167 23.9255 14.576 23.7901C15.7842 22.7642 16.9466 21.8024 17.9727 20.9534C24.0109 15.9573 28 12.6567 28 7.8326C28 3.36727 24.8025 0 20.5625 0Z" fill="white" />
+              <svg width="28" height="24">
+                <use xlink:href="#heart" />
               </svg>
             </button>
 
             <div class="item__content-wrapper">
-              <h3 class="item__title">Джемпер</h3>
+              <h3 class="item__title">Футболка</h3>
 
               <button class="item__to-cart">В корзину</button>
 
@@ -182,12 +183,120 @@
             </button>
 
             <div class="item__content-wrapper">
-              <h3 class="item__title">Джемпер</h3>
+              <h3 class="item__title">Футболка</h3>
 
               <button class="item__to-cart">В корзину</button>
 
               <p class="item__price">2300&nbsp;₽
                 <span class="item__old-price">4200&nbsp;₽</span>
+              </p>
+
+              <button class="item__description-btn">
+                <span class="item__description-text">Подробнее</span>
+              </button>
+            </div>
+
+          </article>
+        </li>
+
+        <li class="goods__item">
+          <article class="item">
+            <img src="img/hoodie.jpg" alt="Худи" class="item__img">
+
+            <button class="item__favorite-btm">
+              <svg width="28" height="24">
+                <use xlink:href="#heart" />
+              </svg>
+            </button>
+
+            <div class="item__content-wrapper">
+              <h3 class="item__title">Худи</h3>
+
+              <button class="item__to-cart">В корзину</button>
+
+              <p class="item__price">4700&nbsp;₽
+                <span class="item__old-price">7500&nbsp;₽</span>
+              </p>
+
+              <button class="item__description-btn">
+                <span class="item__description-text">Подробнее</span>
+              </button>
+            </div>
+
+          </article>
+        </li>
+
+        <li class="goods__item">
+          <article class="item">
+            <img src="img/sweater.jpg" alt="Свитер" class="item__img">
+
+            <button class="item__favorite-btm">
+              <svg width="28" height="24">
+                <use xlink:href="#heart" />
+              </svg>
+            </button>
+
+            <div class="item__content-wrapper">
+              <h3 class="item__title">Свитер</h3>
+
+              <button class="item__to-cart">В корзину</button>
+
+              <p class="item__price">1800&nbsp;₽
+                <span class="item__old-price">3200&nbsp;₽</span>
+              </p>
+
+              <button class="item__description-btn">
+                <span class="item__description-text">Подробнее</span>
+              </button>
+            </div>
+
+          </article>
+        </li>
+
+        <li class="goods__item">
+          <article class="item">
+            <img src="img/women_jumper.jpg" alt="Джемпер" class="item__img">
+
+            <button class="item__favorite-btm">
+              <svg width="28" height="24">
+                <use xlink:href="#heart" />
+              </svg>
+            </button>
+
+            <div class="item__content-wrapper">
+              <h3 class="item__title">Джемпер</h3>
+
+              <button class="item__to-cart">В корзину</button>
+
+              <p class="item__price">5600&nbsp;₽
+                <span class="item__old-price">7400&nbsp;₽</span>
+              </p>
+
+              <button class="item__description-btn">
+                <span class="item__description-text">Подробнее</span>
+              </button>
+            </div>
+
+          </article>
+        </li>
+
+        <li class="goods__item">
+          <article class="item">
+            <img src="img/jeans.jpg" alt="Джинсы" class="item__img">
+
+            <button class="item__favorite-btm">
+              <svg width="28" height="24">
+                <use xlink:href="#heart" />
+              </svg>
+            </button>
+
+            <div class="item__content-wrapper">
+              <h3 class="item__title">Джинсы</h3>
+
+              <button class="item__to-cart">В корзину</button>
+
+              <p class="item__price">4700&nbsp;₽
+                <span class="item__old-price">6200&nbsp;₽</span>
               </p>
 
               <button class="item__description-btn">
@@ -207,7 +316,7 @@
     <ul class="footer__list-nav">
       <li class="footer__nav-item">
         <h3 class="footer__subtitle">Каталог</h3>
-        <ul class="footer__list-wrapper">
+        <ul class="footer__list-vertical">
           <li class="footer__item"><a href="?category=women" class="footer__link">Женщины</a></li>
           <li class="footer__item"><a href="?category=men" class="footer__link">Мужчинаы</a></li>
           <li class="footer__item"><a href="?category=kids" class="footer__link">Детяи</a></li>
@@ -215,7 +324,7 @@
       </li>
       <li class="footer__nav-item">
         <h3 class="footer__subtitle">Покупателям</h3>
-        <ul class="footer__list-wrapper">
+        <ul class="footer__list-vertical">
           <li class="footer__item"><a href="?category=women" class="footer__link">Оплата заказа</a></li>
           <li class="footer__item"><a href="?category=men" class="footer__link">Условия доставки</a></li>
           <li class="footer__item"><a href="?category=kids" class="footer__link">Обмен и возврат заказа</a></li>
@@ -224,13 +333,13 @@
       </li>
       <li class="footer__nav-item">
         <h3 class="footer__subtitle">Связаться с нами</h3>
-        <ul class="footer__list-wrapper">
+        <ul class="footer__list-vertical">
           <li class="footer__item"><a href="?category=women" class="footer__link">Контакты и адреса магазинов</a></li>
         </ul>
       </li>
       <li class="footer__nav-item">
         <h3 class="footer__subtitle">Партнерам</h3>
-        <ul class="footer__list-wrapper">
+        <ul class="footer__list-vertical">
           <li class="footer__item"><a href="?category=women" class="footer__link">Франшизы</a></li>
         </ul>
       </li>
@@ -274,7 +383,9 @@
       </li>
     </ul>
 
-    <a href="#" class="footer__agreement">Соглашение об обработке персональных данных</a>
+    <a href="#" class="footer__agreement">
+      <span class="footer__agreement-text">Соглашение об обработке</span>
+      <span class="footer__agreement-text">персональных данных</span></a>
   </div>
 </footer>
 
