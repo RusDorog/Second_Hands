@@ -4,9 +4,27 @@
 }
 
 .navigation__item{
+  position: relative;
   font-weight: 300;
   font-size: 18px;
   line-height: 22px;
+  transition: transform 0.3s ease, height 0.3s ease;
+}
+
+.navigation__item:hover {
+  font-weight: 400;
+}
+
+.navigation__item:active:after,
+.navigation__item:focus:active {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  bottom: 1px;
+  left: 0;
+  background-color: var(--main-color);
 }
 
 .navigation__btn {

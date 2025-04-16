@@ -54,12 +54,12 @@
   line-height: 17px;
   color: var(--white-color);
   background-color: var(--main-color);
-  border: transparent;
+  border: 1px solid transparent;
   padding: 8px;
 }
 
 .item__to-cart:hover {
-  background-color: #464343;
+  background-color: var(--hover-color);
 }
 
 .item__to-cart:active {
@@ -127,11 +127,11 @@
 
 .item__description-text:hover {
   color: var(--hover-color);
+
 }
 
 .item__description-text:hover:after {
   background-color: var(--hover-color);
-  bottom: 1px;
 }
 
 .item__description-text:active {
@@ -139,8 +139,7 @@
 }
 
 .item__description-text:active:after {
-  bottom: 0;
-  width: 0;
+  display: none;
 }
 
 .item__description-text:focus {
@@ -149,7 +148,6 @@
 
 .item__description-text:focus:after {
   background-color: var(--focus-color);
-  bottom: 1px;
 }
 
 
