@@ -5,6 +5,8 @@ html {
   --gray-color: #F5F5F5;
   --yellow-green-color: #A4EE08;
   --pink-color: #D93162;
+  --hover-color: #464343;
+  --focus-color: #6c6767;
 }
 
 *,
@@ -48,6 +50,10 @@ ul {
 
 h1, h2, h3, p {
   margin: 0;
+}
+
+.hidden {
+  display: none;
 }
 
 .container {
