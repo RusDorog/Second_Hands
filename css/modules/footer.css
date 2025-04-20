@@ -4,16 +4,18 @@
   padding: 60px 0 100px;
 }
 
-.footer__container {
-
-}
-
 .footer__list-nav {
   display: grid;
   grid-template-columns: repeat(4, minmax(max-content, 1fr));
   justify-content: space-between;
   gap: 40px;
   margin-bottom: 100px;
+}
+
+.footer__subtitle {
+  font-size: 20px;
+  line-height: 1.3;
+  text-transform: uppercase;
 }
 
 .footer__list-vertical {
@@ -23,13 +25,7 @@
   font-weight: 300;
   font-size: 16px;
   line-height: 20px;
-}
-
-.footer__subtitle {
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 1.3;
-  text-transform: uppercase;
+  padding-top: 27px;
 }
 
 .footer__list-contacts {
@@ -43,8 +39,6 @@
   display: block;
   width: 42px;
   height: 42px;
-  /*background-repeat: no-repeat;*/
-  /*background-size: contain;*/
   transition: opacity 0.24s ease;
 }
 
@@ -53,10 +47,40 @@
 }
 
 .footer__agreement {
+  position: relative;
   display: block;
   margin: 0 auto;
-  width: max-content;
+  width: min-content;
 }
+
+.footer__agreement:after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 1px;
+  width: 100%;
+  left: 0;
+  bottom: 1px;
+  background-color: var(--white-color);
+  transition: background-color 0.24s ease;
+}
+
+.footer__social-link,
+.footer__link,
+.footer__agreement {
+  transition: color 0.24s ease;
+}
+
+.footer__social-link:hover,
+.footer__link:hover,
+.footer__agreement:hover {
+  color: #A4EE08;
+}
+
+.footer__agreement:hover:after {
+  background-color: #A4EE08;
+}
+
 
 @media (max-width: 1200px) {
   .footer {
@@ -70,17 +94,97 @@
   }
 
   .footer__list-nav {
-    grid-template-columns: repeat(4, minmax(max-content, 1fr));
+    display: grid;
+    grid-template-columns: repeat(2, minmax(max-content, 1fr));
     gap: 50px;
     margin-bottom: 50px;
   }
+
 }
 
 @media (max-width: 760px) {
+  .footer__list-nav {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 
+  .footer__list-vertical { /*Выподающее меню*/
+    height: 0;
+    padding: 0;
+    overflow: hidden; /*Скрываем обьект*/
+  }
+
+  .footer__list-contacts {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 30px;
+  }
+
+  .footer__agreement {
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+  }
+
+  .footer__subtitle { /*Стрелочка напротив*/
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .footer__subtitle:after {
+    content: "";
+    width: 14px;
+    height: 10px;
+    display: block;
+    background-image: url("/img/Polygon 1.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .footer__nav-item_active .footer__list-vertical {
+    height: auto;
+    padding-top: 15px;
+  }
+
+  .footer__link {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+  }
 }
 
-@media (max-width: 580px) {
 
+@media (max-width: 580px) {
+  .footer__container {
+    max-width: 280px;
+  }
+
+  .footer__agreement {
+    display: block;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer__agreement:after {
+    content: none;
+  }
+
+  .footer__agreement-text {
+    position: relative;
+  }
+
+  .footer__agreement-text:after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 1px;
+    width: 100%;
+    left: 0;
+    bottom: 1px;
+    background-color: var(--white-color);
+  }
 }
 

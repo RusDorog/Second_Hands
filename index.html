@@ -8,6 +8,8 @@
   <title>Second Hand</title>
 
   <link rel="stylesheet" href="css/index.css">
+
+  <script src="./scripts/index.js" type="module"></script>
 </head>
 <body>
 
@@ -21,6 +23,7 @@
       <button class="navigation__btn">
         <span class="navigation__btn_line">Каталог</span>
       </button>
+
      <div class="navigation__mobile-wrapper">
        <ul class="navigation__list">
          <li class="navigation__item"><a href="?category=women" class="navigation__link">Женщинам</a></li>
@@ -58,7 +61,7 @@
 
     <div class="header__search">
       <form action="#" class="search">
-        <input type="search" class="search__input">
+        <input type="search" class="search__input" required>
         <button class="search__button" type="button"></button>
         <button class="search__close" type="button"></button>
       </form>
@@ -95,26 +98,28 @@
 <main>
   <section class="hero">
     <div class="container hero__container">
-      <div class="hero__slider">
-        <ul class="hero__slider-wrapper">
-          <li class="hero__slider-item">
+      <div class="hero__slider swiper">
+        <ul class="hero__slider-wrapper swiper-wrapper">
+          <li class="hero__slider-item swiper-slide">
             <a href="?category=women" class="hero__slider-link"
                style="background-image: url('/img/women.jpg'); @media (max-width: 768px) {background-image: url('/img/banner_m.jpg')}">
              <h2 class="hero__slider-title">Новые поступления блузок</h2>
             </a>
           </li>
-          <li class="hero__slider-item" hidden>
+          <li class="hero__slider-item swiper-slide">
             <a href="?category=men" class="hero__slider-link" style="background-image: url('/img/mens.jpg')">
              <h2 class="hero__slider-title">Мужские стильные рубашки</h2>
             </a>
           </li>
-          <li class="hero__slider-item" hidden>
+          <li class="hero__slider-item swiper-slide">
             <a href="?category=kids" class="hero__slider-link" style="background-image: url('/img/kids.jpg')">
              <h2 class="hero__slider-title">Собираем ребенка
                в&nbsp;школу</h2>
             </a>
           </li>
         </ul>
+
+        <div class="hero__slider-pagination"></div>
       </div>
     </div>
   </section>
@@ -358,7 +363,7 @@
       </li>
     </ul>
 
-    <ul class="footer__list-contacts">
+    <ul class="footer__list-contacts footer__list-contacts_social">
       <li class="footer__item">
         <a href="#" class="footer__social-link footer__social-link_instagram">
           <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -388,7 +393,8 @@
 
     <a href="#" class="footer__agreement">
       <span class="footer__agreement-text">Соглашение об обработке</span>
-      <span class="footer__agreement-text">персональных данных</span></a>
+      <span class="footer__agreement-text">персональных данных</span>
+    </a>
   </div>
 </footer>
 
