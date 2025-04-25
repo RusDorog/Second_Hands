@@ -1,19 +1,30 @@
-import Swiper from 'swiper-bundle.min.mjs'
+import Swiper from './swiper-bundle.min.js'
 
-const slider = ( {selectorSlider, selectorPagination, bulletClass, bulletActiveClass }) => {
+const slider = ( {selectorSlider, selectorPagination: el, bulletClass, bulletActiveClass }) => {
 
   new Swiper(selectorSlider, {
     autoplay: true,
     loop: true,
-    // effect: 'coverflow',
+    effect: 'coverflow',
     pagination: {
-      el: selectorPagination,
+      el,
       type: 'bullet',
       bulletClass,
       bulletActiveClass,
       clickable: true,
+    },
+    on: {
+      init() {
+        this.el.addEventListener('mouseenter', () => {
+          this.autoplay.stop();
+        });
+          this.el.addEventListener('mouseleave', () => {
+            this.autoplay.start();
+          })
+      }
     }
   });
 };
+
 
 export default slider;
